@@ -5,12 +5,18 @@ use app\common\Biz\RewriteBiz;
 use think\Controller;
 
 use app\common\model\Banner;
+use Driver\Cache\Redis as Redis;
 
 class Index extends Controller
 {
     public function index()
     {
         return view('index/homepage');
+    }
+
+    public function redistest(){
+        $c = Redis::get('ccc');
+        var_dump($c);
     }
 
     public function hello($name = 'ThinkPHP5')
