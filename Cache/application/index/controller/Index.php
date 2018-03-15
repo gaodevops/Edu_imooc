@@ -6,21 +6,30 @@ use think\Controller;
 
 use app\common\model\Banner;
 use Driver\Cache\Redis as Redis;
+use think\facade\Session;
 
 class Index extends Controller
 {
     public function index()
     {
 
+        if (!Session::has('uid')) {
+            echo "您没登录";
+            exit;
+        }
+        $data = array();
+        $data['views'] = 0;
+        $data['uid'] = Session::get('uid');
+        $data['username'] = Redis::get('username_'.$data['uid']);
+
         //这里是更新到数据库的流程
         //.....
         if (true) {
-            //其实这个返回的结果就是最新的统计，这里我们学习下get 这个就不取值 了
-            Redis::incr('view');
+            //其实这个返回的结果就是最新的统计
+            $data['views'] = Redis::incr('view_'.$data['uid']);
         }
 
-        $views = Redis::get('view');
-        return view('index/homepage',array('views' => $views, ));
+        return view('index/homepage',$data);
     }
 
     public function redistest(){
