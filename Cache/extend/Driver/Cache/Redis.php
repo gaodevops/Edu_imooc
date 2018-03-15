@@ -67,7 +67,7 @@ class Redis {
 					'port'          => Config::get('cache.REDIS_PORT')?? 6379,
 				);
         if (!self::$_write_handle) {
-            self::$_write_handle = new Redis();
+            self::$_write_handle = new \Redis();
             self::$_write_handle->connect($options['host'],$options['port']);
         }
 
@@ -173,6 +173,13 @@ class Redis {
         }
     }
 
+    public static function append($key,$value){
+        return self::getWrite()->append($key,$value); 
+    }
+
+    public static function strlen($key){
+        return self::getRead()->strlen($key); 
+    }
 
     /**
      * 左侧如队列

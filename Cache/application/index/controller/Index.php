@@ -11,7 +11,16 @@ class Index extends Controller
 {
     public function index()
     {
-        return view('index/homepage');
+
+        //这里是更新到数据库的流程
+        //.....
+        if (true) {
+            //其实这个返回的结果就是最新的统计，这里我们学习下get 这个就不取值 了
+            Redis::incr('view');
+        }
+
+        $views = Redis::get('view');
+        return view('index/homepage',array('views' => $views, ));
     }
 
     public function redistest(){
