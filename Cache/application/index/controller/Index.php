@@ -1,79 +1,35 @@
 <?php
 namespace app\index\controller;
-use app\common\Biz\ChannelBiz;
-use app\common\Biz\RewriteBiz;
-use think\Controller;
 
-use app\common\model\Banner;
-use Driver\Cache\Redis as Redis;
+use Driver\Cache\Redis;
 use think\facade\Session;
 
-class Index extends Controller
+class Index
 {
     public function index()
     {
-
-        if (!Session::has('uid')) {
-            echo "您没登录";
-            exit;
-        }
-        $data = array();
-        $data['views'] = 0;
-        $data['uid'] = Session::get('uid');
-        $data['username'] = Redis::get('username_'.$data['uid']);
-
-        //这里是更新到数据库的流程
-        //.....
-        if (true) {
-            //其实这个返回的结果就是最新的统计
+//        uid
+//        nickname
+//        views 0
+        $data = array(
+            'uid' => Session::get('uid'),
+            'views' => 0,
+            'username' => '游客',
+        );
+        if (!empty($data['uid'])){
+            $data['username'] = Redis::get('username_'.$data['uid']);
+            //统计结果应该是先去数据库里去检索，这里咱们不检索了，
             $data['views'] = Redis::incr('view_'.$data['uid']);
+            $data['userinfo'] = Redis::hget('user_'.$data['uid']);
+
+//            Redis::hincrby('user_'.$data['uid'],'age');
+
         }
-
-        return view('index/homepage',$data);
-    }
-
-    public function redistest(){
-        $c = Redis::get('ccc');
-        var_dump($c);
+        return view('index/home',$data);
     }
 
     public function hello($name = 'ThinkPHP5')
     {
         return 'hello,' . $name;
-    }
-
-    public  function BannerJson(){
-        $BannerModel = new Banner();
-        return $BannerModel -> BannerJsonToFile(7);
-    }
-
-
-    /**
-     * 后台生成lovelife 模块
-     * @throws \think\db\exception\DataNotFoundException
-     * @throws \think\db\exception\ModelNotFoundException
-     * @throws \think\exception\DbException
-     */
-    public function lovelifetohtml(){
-        $channel_ids = array(1,2,3,4);
-        $channel_data =  array();
-        $ChannelBiz = new ChannelBiz();
-        foreach ($channel_ids as $channel_id) {
-            array_push($channel_data,$ChannelBiz ->GetChannelContent($channel_id));
-        }
-
-
-        $RewriteBiz = new RewriteBiz();
-        $result = $RewriteBiz ->ToHtml('channel' , $channel_data);
-        if ($result){
-            echo '成功';
-        }else{
-            echo '失败';
-        }
-
-
-//        return view('index/homepage');
-//        $BannerModel = new Channel.php();
-//        return $BannerModel -> GetChannelInfo(1);
     }
 }

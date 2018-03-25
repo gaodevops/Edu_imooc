@@ -22,11 +22,13 @@ return [
     'prefix' => '',
     // 缓存有效期 0表示永久缓存
     'expire' => 0,
+    'MEMCACHED_HOST' => '127.0.0.1',
+    'MEMCACHED_PORT' => 11211,
 
-    'REDIS_HOST'=>'127.0.0.1', //redis服务器ip，多台用逗号隔开；读写分离开启时，第一台负责写，其它[随机]负责读；
-    'REDIS_PORT'=>'6379',//端口号
+    'REDIS_W_HOST' => '127.0.0.1',
+    'REDIS_W_PORT' => 6379,
 
-    'REDIS_R_HOST'=>'127.0.0.1', //redis服务器ip，多台用逗号隔开；读写分离开启时，第一台负责写，其它[随机]负责读；
-    'REDIS_R_PORT'=>'6379',//端口号
- 
+    'REDIS_R_HOST' => '127.0.0.1',
+    'REDIS_R_PORT' => 6379,
+
 ];

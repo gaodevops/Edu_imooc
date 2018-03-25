@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!--
+
+/etc/nginx/nginx.conf
+proxy_buffering off;
+fastcgi_keep_conn on;
+gzip off
+
+/php.ini
+
+output_buffering = off
+
+
+-->
+
+<html>
+<head>
+    <title>京西频道页面</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="icon" href="/img/icon.ico">
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/jquery.slideshow.js"></script>
+    <script type="text/javascript" src="/js/jquery.smimgslide.js"></script>
+    <script type="text/javascript" src="/js/jquery.countdown.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+</head>
+<body>
+<div class="header">
+    <div class="header-nav common-container">
+        <ul class="header-nav-list">
+            <li><h3><a href="#">秒杀</a></h3></li>
+            <li><h3><a href="#">优惠券</a></h3></li>
+            <li><h3><a href="#">闪购</a></h3></li>
+            <li><h3><a href="#">拍卖</a></h3></li>
+            <li><h3><a href="#">服装城</a></h3></li>
+            <li><h3><a href="#">京西超市</a></h3></li>
+            <li><h3><a href="#">生鲜</a></h3></li>
+            <li><h3><a href="#">全球购</a></h3></li>
+            <li><h3><a href="#">京西金融</a></h3></li>
+        </ul>
+    </div>
+</div>
+<div class="lovelife">
+    <div class="common-container clearfloat lovelife-box">
+        <div class="common-title">
+            <i></i>
+            <h2>爱生活</h2>
+            <i></i>
+        </div>
+        <ul class="lovelife-list clearfloat">
+<?php
+ob_end_clean();
+ob_flush();
+flush();
+sleep(3);
+?>
+
+            <li class="lovelife-list-item1 lovelife-list-col2  sidebarpointer" >
+
+    <div class="lovelife-list-title">
+        <h3>爱逛</h3>
+        <ul> <li><a href="#aiguang">奢侈品</a></li> <li><a href="#aiguang">保暖羽绒服</a></li> <li><a href="#aiguang">功能箱包</a></li> <li><a href="#aiguang">时尚手表</a></li> <li><a href="#aiguang">珠宝首饰</a></li>
+        </ul>
+    </div>
+    <div class="lovelife-list-content">
+        <div class="lovelife-list-content-box">
+            <div class="lovelife-list-content-leimg">
+                <a href="#"><img src="/img/lovelife/lovelife-list-content-leimg-img1.jpg"></a>
+            </div>
+            <ul class="lovelife-list-content-riimg">
+                 <li><a href="#"><p>型男衣橱</p><p>抢大额神券</p><img src="/img/lovelife/lovelife-list-content-riimg-img1.jpg"></a></li> <li><a href="#"><p>摩登女装</p><p>满299减100券</p><img src="/img/lovelife/lovelife-list-content-riimg-img2.jpg"></a></li> <li><a href="#"><p>内衣精选</p><p>每满50减12</p><img src="/img/lovelife/lovelife-list-content-riimg-img3.jpg"></a></li> <li><a href="#"><p>时尚女鞋</p><p>跨店199减100</p><img src="/img/lovelife/lovelife-list-content-riimg-img4.jpg"></a></li>
+            </ul>
+            <ul class="lovelife-list-content-mdimg">
+                 <li><a href="#"><img src="/img/lovelife/lovelife-list-content-mdimg-img1.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/lovelife-list-content-mdimg-img2.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/lovelife-list-content-mdimg-img3.jpg"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="lovelife-list-smimg">
+        <span class="lovelife-list-smimg-leftarrow">&lt;</span>
+        <span class="lovelife-list-smimg-rightarrow">&gt;</span>
+        <div class="lovelife-list-smimg-box">
+            <ul>  <li><a href="#"><img src="/img/lovelife/smimg/loveshopping/img1.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/loveshopping/img2.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/loveshopping/img3.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/loveshopping/img4.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/loveshopping/img5.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/loveshopping/img6.jpg"></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+</li>
+            <?php
+            ob_flush();
+            flush();
+            sleep(3);
+            ?>
+            <li class="lovelife-list-item2 lovelife-list-col2  sidebarpointer" >
+
+    <div class="lovelife-list-title">
+        <h3>爱美丽</h3>
+        <ul> <li><a href="#aimeili">套装</a></li> <li><a href="#aimeili">乳液面霜</a></li> <li><a href="#aimeili">面膜</a></li> <li><a href="#aimeili">洁面</a></li> <li><a href="#aimeili">宝洁洗护</a></li> <li><a href="#aimeili">身体护理</a></li>
+        </ul>
+    </div>
+    <div class="lovelife-list-content">
+        <div class="lovelife-list-content-box">
+            <div class="lovelife-list-content-leimg">
+                <a href="#"><img src="/img/lovelife/lovelife-list-content-leimg-img2.jpg"></a>
+            </div>
+            <ul class="lovelife-list-content-riimg">
+                 <li><a href="#"><p>美妆馆</p><p>满199-100</p><img src="/img/lovelife/lovelife-list-content-riimg-img5.jpg"></a></li> <li><a href="#"><p>面部护肤</p><p>低至199-100</p><img src="/img/lovelife/lovelife-list-content-riimg-img6.jpg"></a></li> <li><a href="#"><p>香水彩妆</p><p>满199-100</p><img src="/img/lovelife/lovelife-list-content-riimg-img7.jpg"></a></li> <li><a href="#"><p>洗发护发</p><p>满199-100</p><img src="/img/lovelife/lovelife-list-content-riimg-img8.jpg"></a></li>
+            </ul>
+            <ul class="lovelife-list-content-mdimg">
+                 <li><a href="#"><img src="/img/lovelife/lovelife-list-content-mdimg-img4.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/lovelife-list-content-mdimg-img5.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/lovelife-list-content-mdimg-img6.jpg"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="lovelife-list-smimg">
+        <span class="lovelife-list-smimg-leftarrow">&lt;</span>
+        <span class="lovelife-list-smimg-rightarrow">&gt;</span>
+        <div class="lovelife-list-smimg-box">
+            <ul>  <li><a href="#"><img src="/img/lovelife/smimg/lovebeauty/img1.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/lovebeauty/img2.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/lovebeauty/img3.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/lovebeauty/img3.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/lovebeauty/img4.jpg"></a></li> <li><a href="##"><img src="/img/lovelife/smimg/lovebeauty/img5.jpg"></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+</li>
+
+            <?php
+            ob_flush();
+            flush();
+            sleep(3);
+            ?>
+            <li class="lovelife-list-item3 lovelife-list-col2  sidebarpointer" >
+
+    <div class="lovelife-list-title">
+        <h3>家电馆</h3>
+        <ul> <li><a href="#jiadian">电视家影</a></li> <li><a href="#jiadian">美容器</a></li> <li><a href="#jiadian">送电视挂架</a></li> <li><a href="#jiadian">洗衣机</a></li> <li><a href="#jiadian">满600减100</a></li>
+        </ul>
+    </div>
+    <div class="lovelife-list-content">
+        <div class="lovelife-list-content-box">
+            <div class="lovelife-list-content-leimg">
+                <a href="#"><img src="/img/lovelife/lovelife-list-content-leimg-img3.jpg"></a>
+            </div>
+            <ul class="lovelife-list-content-riimg">
+                 <li><a href="#"><p>大家电馆</p><p>白条12期免息购</p><img src="/img/lovelife/lovelife-list-content-riimg-img9.jpg"></a></li> <li><a href="#"><p>厨卫家装馆</p><p>爆款好货低至79元</p><img src="/img/lovelife/lovelife-list-content-riimg-img10.jpg"></a></li> <li><a href="#"><p>电视家影</p><p>满5000减300</p><img src="/img/lovelife/lovelife-list-content-riimg-img11.jpg"></a></li> <li><a href="#"><p>冰洗品牌日</p><p>热销爆款提前抢</p><img src="/img/lovelife/lovelife-list-content-riimg-img12.jpg"></a></li>
+            </ul>
+            <ul class="lovelife-list-content-mdimg">
+                 <li><a href="#"><img src="/img/lovelife/lovelife-list-content-mdimg-img7.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/lovelife-list-content-mdimg-img8.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/lovelife-list-content-mdimg-img9.jpg"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="lovelife-list-smimg">
+        <span class="lovelife-list-smimg-leftarrow">&lt;</span>
+        <span class="lovelife-list-smimg-rightarrow">&gt;</span>
+        <div class="lovelife-list-smimg-box">
+            <ul>  <li><a href="#"><img src="/img/lovelife/smimg/homeapp/img1.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/homeapp/img2.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/homeapp/img3.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/homeapp/img4.jpg"></a></li> <li><a href="##"><img src="/img/lovelife/smimg/homeapp/img5.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/homeapp/img6.jpg"></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+</li>
+
+            <?php
+            ob_flush();
+            flush();
+            sleep(3);
+            ?>
+            <li class="lovelife-list-item4 lovelife-list-col2  sidebarpointer" >
+
+                <?php
+                ob_flush();
+                flush();
+                sleep(3);
+                ?>
+
+    <div class="lovelife-list-title">
+        <h3>手机派</h3>
+        <ul> <li><a href="#shouji">金属机身</a></li> <li><a href="#shouji">快速充电</a></li> <li><a href="#shouji">拍照神器</a></li> <li><a href="#shouji">后置双摄像</a></li> <li><a href="#shouji">双卡双待</a></li>
+        </ul>
+    </div>
+    <div class="lovelife-list-content">
+        <div class="lovelife-list-content-box">
+            <div class="lovelife-list-content-leimg">
+                <a href="#"><img src="/img/lovelife/lovelife-list-content-leimg-img4.jpg"></a>
+            </div>
+            <ul class="lovelife-list-content-riimg">
+                 <li><a href="#"><p>新Phone尚</p><p>潮流新品抢先体验</p><img src="/img/lovelife/lovelife-list-content-riimg-img13.jpg"></a></li> <li><a href="#"><p>促销汇</p><p>iPhone5s低至1899</p><img src="/img/lovelife/lovelife-list-content-riimg-img14.jpg"></a></li> <li><a href="#"><p>手机通讯</p><p>Cool 1C火爆发售</p><img src="/img/lovelife/lovelife-list-content-riimg-img15.jpg"></a></li> <li><a href="#"><p>怎么挑手机</p><p>潮机评测</p><img src="/img/lovelife/lovelife-list-content-riimg-img16.jpg"></a></li>
+            </ul>
+            <ul class="lovelife-list-content-mdimg">
+                 <li><a href="#"><img src="/img/lovelife/lovelife-list-content-mdimg-img10.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/lovelife-list-content-mdimg-img11.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/lovelife-list-content-mdimg-img12.jpg"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="lovelife-list-smimg">
+        <span class="lovelife-list-smimg-leftarrow">&lt;</span>
+        <span class="lovelife-list-smimg-rightarrow">&gt;</span>
+        <div class="lovelife-list-smimg-box">
+            <ul>  <li><a href="#"><img src="/img/lovelife/smimg/phone/img1.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/phone/img2.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/phone/img3.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/phone/img4.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/phone/img5.jpg"></a></li> <li><a href="#"><img src="/img/lovelife/smimg/phone/img6.jpg"></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+</li>
+
+        </ul>
+    </div>
+</div>
+<!-- footer start -->
+<div class="footer">
+    <div class="footer-slogans">
+        <ul>
+            <li class="footer-slogans-item1"><i></i>
+                <h3>品类齐全，轻松购物</h3></li>
+            <li class="footer-slogans-item2"><i></i>
+                <h3>多仓直发，极速配送</h3></li>
+            <li class="footer-slogans-item3"><i></i>
+                <h3>正品行货，精致服务</h3></li>
+            <li class="footer-slogans-item4"><i></i>
+                <h3>天天低价，畅选无忧</h3></li>
+        </ul>
+    </div>
+    <div class="common-container clearfloat">
+        <div class="footer-sevice clearfloat">
+            <table class="footer-sevice-table">
+                <thead>
+                <tr>
+                    <th>购物指南</th>
+                    <th>配送方式</th>
+                    <th>支付方式</th>
+                    <th>售后服务</th>
+                    <th>特色服务</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><a href="#">购物流程</a></td>
+                    <td><a href="#">上门自提</a></td>
+                    <td><a href="#">货到付款</a></td>
+                    <td><a href="#">售后政策</a></td>
+                    <td><a href="#">夺宝岛</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">会员介绍</a></td>
+                    <td><a href="#">211限时达</a></td>
+                    <td><a href="#">在线支付</a></td>
+                    <td><a href="#">价格保护</a></td>
+                    <td><a href="#">DIY装机</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">生活旅行</a></td>
+                    <td><a href="#">配送服务查询</a></td>
+                    <td><a href="#">分期付款</a></td>
+                    <td><a href="#">退款说明</a></td>
+                    <td><a href="#">延保服务</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">常见问题</a></td>
+                    <td><a href="#">配送费收取标准</a></td>
+                    <td><a href="#">邮局汇款</a></td>
+                    <td><a href="#">返修/退换货</a></td>
+                    <td><a href="#">京西E卡</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">大家电</a></td>
+                    <td><a href="#">海外配送</a></td>
+                    <td><a href="#">公司转账</a></td>
+                    <td><a href="#">取消订单</a></td>
+                    <td><a href="#">京西通信</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#">联系客服</a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><a href="#">京西JD+</a></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="footer-sevice-info">
+                <h5>京西自营覆盖区县</h5>
+                <p>京西已向全国2654个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
+                <p><a href="#">查看详情 ></a></p>
+            </div>
+        </div>
+        <div class="footer-lists">
+            <ul class="footer-lists-links">
+                <li><a href="#">关于我们</a></li>
+                <li>|</li>
+                <li><a href="#">联系我们</a></li>
+                <li>|</li>
+                <li><a href="#">商家入驻</a></li>
+                <li>|</li>
+                <li><a href="#">营销中心</a></li>
+                <li>|</li>
+                <li><a href="#">手机京西</a></li>
+                <li>|</li>
+                <li><a href="#">友情链接</a></li>
+                <li>|</li>
+                <li><a href="#">销售联盟</a></li>
+                <li>|</li>
+                <li><a href="#">京西社区</a></li>
+                <li>|</li>
+                <li><a href="#">风险监测</a></li>
+                <li>|</li>
+                <li><a href="#">京西公益</a></li>
+                <li>|</li>
+                <li><a href="#">English Site</a></li>
+                <li>|</li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <br>
+            <ul class="footer-lists-line1">
+                <li><a href="#">京公网安备 11000002000088号</a></li>
+                <li>|</li>
+                <li>京ICP证070359号</li>
+                <li>|</li>
+                <li><a href="#">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a></li>
+                <li>|</li>
+                <li>新出发京零 字第大120007号</li>
+            </ul>
+            <br>
+            <ul class="footer-lists-line2">
+                <li>互联网出版许可证编号新出网证(京)字150号</li>
+                <li>|</li>
+                <li><a href="#">出版物经营许可证</a></li>
+                <li>|</li>
+                <li><a href="#">网络文化经营许可证京网文[2014]2148-348号</a></li>
+                <li>|</li>
+                <li>违法和不良信息举报电话：4006561155</li>
+            </ul>
+            <br>
+            <ul class="footer-lists-line3">
+                <li>Copyright &copy; 2004 - 2016 京西JD.com 版权所有</li>
+                <li>|</li>
+                <li>消费者维权热线：4006067733&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">经营执照</a></li>
+            </ul>
+            <br>
+            <ul class="footer-lists-line4">
+                <li>京西旗下网站：<a href="#">京西钱包</a></li>
+                <li>|</li>
+                <li><a href="#">京西云</a></li>
+            </ul>
+            <br>
+            <ul class="footer-lists-icons">
+                <li class="footer-lists-icons-item1"><a href="#"></a></li>
+                <li class="footer-lists-icons-item2"><a href="#"></a></li>
+                <li class="footer-lists-icons-item3"><a href="#"></a></li>
+                <li class="footer-lists-icons-item4"><a href="#"></a></li>
+                <li class="footer-lists-icons-item5"><a href="#"></a></li>
+                <li class="footer-lists-icons-item6"><a href="#"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- footer end -->
+</body>
+</html>

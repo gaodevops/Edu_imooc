@@ -12,13 +12,11 @@
 // [ 应用入口文件 ]
 namespace think;
 
-//程序目录
-define('APP_PATH', dirname(__DIR__) . '/application/');
-//站点目录
-define('SITE_PATH', __DIR__);
-
 // 加载基础文件
 require __DIR__ . '/../thinkphp/base.php';
+define('APP_PATH',dirname(__DIR__.'/application/'));
+define('SITE_PATH',dirname(__DIR__));
+
 
 // 支持事先使用静态方法设置Request对象和Config对象
 
