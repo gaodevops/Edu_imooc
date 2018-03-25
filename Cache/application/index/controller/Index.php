@@ -34,6 +34,13 @@ class Index
 
 //            Redis::hincrby('user_'.$data['uid'],'age');
 
+
+            //jihe
+            $data['bei'] = Redis::smembers('goods_bei');
+            $data['nan'] = Redis::smembers('goods_nan');
+
+
+
         }
         return view('index/home',$data);
     }

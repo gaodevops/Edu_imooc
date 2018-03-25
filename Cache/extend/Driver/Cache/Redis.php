@@ -184,5 +184,25 @@ class Redis
         return self::getRead()->sMembers($key);
     }
 
+    //获得集合中元素的个数
+    public static function scard($key) {
+        return self::getRead()->sCard($key);
+    }
+
+    //取差
+    public static function sdiff($key1,$key2) {
+        return self::getRead()->sDiff($key1,$key2);
+    }
+
+    //交集
+    public static function sinter($key1,$key2) {
+        return self::getRead()->sInter($key1,$key2);
+    }
+
+    //取并集
+    public static function sunion($key1,$key2) {
+        return self::getRead()->sUnion($key1,$key2);
+    }
+
 
 }

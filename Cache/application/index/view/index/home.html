@@ -2088,73 +2088,42 @@
     <div class="common-container">
         <div class="common-title">
             <i></i>
-            <h2>购特色</h2>
+            <h2>北方专供</h2>
             <i></i>
         </div>
         <ul class="buyunique-list clearfloat">
-            <li class="buyunique-list-item1">
-                <a href="#">
-                    <img src="static/img/buyunique/img1.jpg">
+            {foreach name="bei" item="vo" key="k" }
+            <li class="buyunique-list-item{$k+1}">
+                <a>
+                    <img src="static/img/buyunique/img_{$vo}.jpg">
                     <div>
-                        <h3>京西拍卖</h3>
-                        <p>精品捡漏 限时抢拍</p>
+                        <h3>{$vo}</h3>
                     </div>
                 </a>
             </li>
-            <li class="buyunique-list-item2">
-                <a href="#">
-                    <img src="static/img/buyunique/img2.jpg">
+            {/foreach}
+        </ul>
+    </div>
+
+
+    <div class="common-container">
+        <div class="common-title">
+            <i></i>
+            <h2>南方专供</h2>
+            <i></i>
+        </div>
+        <ul class="buyunique-list clearfloat">
+
+            {foreach name="nan" item="vo" key="k" }
+            <li class="buyunique-list-item{$k+1}">
+                <a>
+                    <img src="static/img/buyunique/img_{$vo}.jpg">
                     <div>
-                        <h3>环球时尚</h3>
-                        <p>环球名品 奢华精选</p>
+                        <h3>{$vo}</h3>
                     </div>
                 </a>
             </li>
-            <li class="buyunique-list-item3">
-                <a href="#">
-                    <img src="static/img/buyunique/img3.jpg">
-                    <div>
-                        <h3>品牌特卖</h3>
-                        <p>品牌限量秒杀手慢无</p>
-                    </div>
-                </a>
-            </li>
-            <li class="buyunique-list-item4">
-                <a href="#">
-                    <img src="static/img/buyunique/img4.jpg">
-                    <div>
-                        <h3>京西健康</h3>
-                        <p>药品保健滋补医疗计生</p>
-                    </div>
-                </a>
-            </li>
-            <li class="buyunique-list-item5">
-                <a href="#">
-                    <img src="static/img/buyunique/img5.jpg">
-                    <div>
-                        <h3>陪伴宝宝</h3>
-                        <p>陪伴专享 买1得2</p>
-                    </div>
-                </a>
-            </li>
-            <li class="buyunique-list-item6">
-                <a href="#">
-                    <img src="static/img/buyunique/img6.jpg">
-                    <div>
-                        <h3>企业购</h3>
-                        <p>商用电脑每满1000减100</p>
-                    </div>
-                </a>
-            </li>
-            <li class="buyunique-list-item7">
-                <a href="#">
-                    <img src="static/img/buyunique/img7.jpg">
-                    <div>
-                        <h3>IN货推荐</h3>
-                        <p>电单车立省1600元</p>
-                    </div>
-                </a>
-            </li>
+            {/foreach}
         </ul>
     </div>
 </div>
