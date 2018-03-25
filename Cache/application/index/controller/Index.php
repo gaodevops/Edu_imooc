@@ -21,6 +21,16 @@ class Index
             //统计结果应该是先去数据库里去检索，这里咱们不检索了，
             $data['views'] = Redis::incr('view_'.$data['uid']);
             $data['userinfo'] = Redis::hget('user_'.$data['uid']);
+            if (empty($data['userinfo'])){
+                $data['userinfo'] = array(
+                    'username' => '',
+                    'sex' => '',
+                    'city' => '',
+                    'age' => '',
+                    'color' => '',
+                    'love' => '',
+                );
+            }
 
 //            Redis::hincrby('user_'.$data['uid'],'age');
 
@@ -31,5 +41,40 @@ class Index
     public function hello($name = 'ThinkPHP5')
     {
         return 'hello,' . $name;
+    }
+
+    //两个缓存  如商品3
+    // ms_status_3 为1时秒杀结束
+    // ms_3 秒杀uid列表
+
+    public function miaosha()
+    {
+        $uid = input('post.uid');
+        $sid = input('post.sid');
+        $cache_ms_status = 'ms_status_'.$sid;
+        $cache_ms_uids = 'ms_'.$sid;
+        if (Redis::get($cache_ms_status) == 1) {
+            return array(
+                'code' => 0,
+                'msg' => '秒杀结束',
+            );
+        }
+
+        $number = Redis::llen($cache_ms_uids);
+
+        if ($number >1) {
+            //标记秒杀是否已经结束
+            Redis::set($cache_ms_status,1);
+            return array(
+                'code' => 0,
+                'msg' => '秒杀结束',
+            );
+        }
+        Redis::lpush($cache_ms_uids,$uid);
+        return array(
+            'code' => 1,
+            'msg' => '秒杀成功',
+        );
+
     }
 }

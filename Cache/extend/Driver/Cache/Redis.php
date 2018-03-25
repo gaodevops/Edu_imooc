@@ -96,5 +96,93 @@ class Redis
         return self::getWrite()->hIncrBy($key,$field,$number);
     }
 
+    // list
+
+
+    /**
+     * 左侧如队列
+     * @param $key
+     * @param $value
+     * @return int
+     */
+    public static function lpush($key,$value) {
+        if (!self::getWrite()) return false;
+        return self::getWrite()->lPush($key,$value);
+    }
+//    public static function lpushx($key,$value) {
+//        return self::getWrite()->lPushx($key,$value);
+//    }
+
+//    /**
+//     * 右侧如队列
+//     * @param $key
+//     * @param $value
+//     * @return int
+//     */
+//    public static function rpush($key,$value) {
+//        if (!self::getWrite()) return false;
+//        if (!self::getWrite()) return false;
+//        return self::getWrite()->rPush($key,$value);
+//    }
+//    public static function rpushx($key,$value) {
+//        if (!self::getWrite()) return false;
+//        return self::getWrite()->rPushx($key,$value);
+//    }
+
+
+    /**
+     * 左侧出队列
+     * @param $key
+     */
+//    public static function lpop($key) {
+//        return self::getRead()->lPop($key);
+//    }
+    /**
+     * 右侧出队列
+     * @param $key
+     */
+    public static function rpop($key) {
+        return self::getRead()->rPop($key);
+    }
+
+    public static function llen($key) {
+        return self::getRead()->lLen($key);
+    }
+
+
+    /**
+     * 插入集合
+     * @param $key
+     * @param $value
+     * @return int
+     */
+    public static function sadd($key,$value) {
+        if (!self::getWrite()) return false;
+
+        return self::getWrite()->sAdd($key,$value);
+    }
+
+
+    /**
+     * 移除集合中的指定元素
+     * @param $key
+     * @param $value
+     */
+    public static function sremove($key, $value) {
+        if (!self::getWrite()) return false;
+
+        return self::getWrite()->sRemove($key,$value);
+    }
+
+
+    /**
+     * 获取指定集合的所有元素
+     * @param $key
+     * @return array
+     */
+    public static function smembers($key) {
+        return self::getRead()->sMembers($key);
+    }
+
 
 }
