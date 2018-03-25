@@ -205,4 +205,38 @@ class Redis
     }
 
 
+    //zset
+    public static function zadd($key,$score,$value) {
+        if (!self::getWrite()) return false;
+
+        return self::getWrite()->zAdd($key,$score,$value);
+    }
+
+    //获取元素的分数
+
+    public static function zscore($key,$value) {
+        return self::getRead()->zScore($key,$value);
+    }
+
+    //删除元素
+    public static function zdelete($key,$value) {
+        return self::getRead()->zDelete($key,$value);
+    }
+
+    //获取集合中元素的个数
+    public static function zsize($key) {
+        return self::getRead()->zSize($key);
+    }
+
+    //获获取排名在某个范围的元素  从小到大排列，，等同于权重。1最向前
+    public static function zrange($key,$start,$end,$withscores = true) {
+        return self::getRead()->zRange($key,$start,$end, $withscores);
+    }
+
+    public static function zrevrange($key,$start,$end,$withscores = true) {
+        return self::getRead()->zRevRange($key,$start,$end, $withscores);
+    }
+
+
+
 }

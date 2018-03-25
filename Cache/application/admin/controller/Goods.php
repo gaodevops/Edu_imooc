@@ -40,4 +40,20 @@ class Goods extends Controller
         var_dump(Redis::sunion('goods_nan','goods_bei'));
 
     }
+
+
+    public function setScore(){
+
+        if ($_POST){
+            foreach ($_POST as $key => $val) {
+                if ($key == 'submit') continue;
+                Redis::zadd('goods_score',$val,$key);
+            }
+            echo '成功添加';
+            exit;
+
+        }
+
+        return view('goods/score');
+    }
 }

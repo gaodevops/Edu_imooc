@@ -38,8 +38,8 @@ class Index
             //jihe
             $data['bei'] = Redis::smembers('goods_bei');
             $data['nan'] = Redis::smembers('goods_nan');
-
-
+            $data['goods_score_num'] =Redis::zsize('goods_score');
+            $data['goods_score'] = Redis::zrevrange('goods_score',0,4,true);
 
         }
         return view('index/home',$data);

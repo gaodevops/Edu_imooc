@@ -1247,21 +1247,13 @@
                         <div class="lovelife-list-content-leimg">
                             <a href="#"><img src="static/img/lovelife/loveeat/right-img2.jpg"></a>
                         </div>
-                        <ul class="lovelife-list-content-riimg lovelife-smbox">
-                            <li>
-                                <a href="#">
-                                    <p>东家菜</p>
-                                    <p>霸道总裁教你做菜</p>
-                                    <img src="static/img/lovelife/loveeat/right-img3.jpg">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <p>0元试吃</p>
-                                    <p>丰富好味轻松品尝</p>
-                                    <img src="static/img/lovelife/loveeat/right-img4.jpg">
-                                </a>
-                            </li>
+                        <ul class="lovelife-list-content-riimg lovelife-smbox score-list">
+                            <h3>好评前五榜：<span>(参评{$goods_score_num}种)</span></h3>
+                            {php}$i =1;{/php}
+                            {foreach name="goods_score" item="vo" key="k" }
+                            <li >{$i}. {$k} {$vo}分 </li>
+                            {php}$i++;{/php}
+                            {/foreach}
                         </ul>
                         <ul class="lovelife-list-content-mdimg">
                             <li>
